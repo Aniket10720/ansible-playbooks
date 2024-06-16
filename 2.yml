@@ -5,3 +5,4 @@
     - home: /home/aniket   
       debug:
         msg: "Username: {{ aniket }}, Home dir: {{ home }}"
+
