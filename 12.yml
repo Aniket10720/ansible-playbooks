@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 - hosts: dev
   become: yes
   vars:
@@ -44,3 +45,12 @@
 
 
 
+=======
+- hosts: dev 
+  become: yes
+  tasks:
+    - name: Remove file 
+      ansible.builtin.file:
+        path: /work/aniket.config
+        state: absent
+>>>>>>> c27679b (commit)

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 - hosts: all
   tasks:
     - name: creates users files
@@ -12,3 +13,13 @@
 
 
 
+=======
+- hosts: dev
+  become: yes
+  tasks:
+    - name: Touch the same file, but add/remove some permissions
+      ansible.builtin.file:
+        path: /work/aniket.conf
+        state: touch
+        mode: u+rw,g=wx,o-rwx
+>>>>>>> c27679b (commit)

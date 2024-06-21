@@ -1,6 +1,7 @@
 ---
 - hosts: dev
   become: yes
+<<<<<<< HEAD
   vars:
     page_title: My Landing Page
     page_description: This is my landing page description.
@@ -22,3 +23,12 @@
         proto: tcp    
 
 
+=======
+  tasks: 
+    - name: Recursively change ownership of a directory
+      ansible.builtin.file:
+        path: /work/new_dir
+        state: directory
+        owner: aniket
+        group: aniket
+>>>>>>> c27679b (commit)
