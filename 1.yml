@@ -1,0 +1,11 @@
+---
+- hosts: dev
+  become: yes
+  tasks:
+    - name: change file ownership, group and permission
+      ansible.builtin.file:
+        path: /etc/aniket.conf
+        owner: root
+        group: root
+        mode: '0644'
+

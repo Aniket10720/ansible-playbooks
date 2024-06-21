@@ -1,0 +1,11 @@
+---
+- hosts: dev
+  become: yes
+  tasks:
+    - name:
+      ansible.builtin.file:
+        path: /work
+        owner: root
+        group: root
+        mode: '1777'
+

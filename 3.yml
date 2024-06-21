@@ -1,0 +1,11 @@
+---
+- hosts: dev
+  become: yes
+  tasks: 
+    - name: create symbolic link 
+      ansible.builtin.file:
+        src: /home/aniket/example.txt
+        dest: /var/www/html/example.txt 
+        owner: root
+        group: root
+        state: link

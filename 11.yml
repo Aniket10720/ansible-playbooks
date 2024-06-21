@@ -1,0 +1,10 @@
+---
+- hosts: dev
+  become: yes
+  tasks: 
+    - name: Recursively change ownership of a directory
+      ansible.builtin.file:
+        path: /work/new_dir
+        state: directory
+        owner: aniket
+        group: aniket

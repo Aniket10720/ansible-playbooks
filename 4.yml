@@ -1,0 +1,13 @@
+---
+- hosts: dev
+  become: yes
+  tasks:
+    - name: create two hard link
+      ansible.builtin.file:
+        src: '/work/{{ item.src }}'
+        dest: '{{ item.dest }}'
+        state: hard
+      loop: 
+        - {src: x, dest: y}
+        - {src: z, dest: k}
+  
