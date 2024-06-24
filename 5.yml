@@ -1,6 +1,5 @@
 ---
 - hosts: dev
-<<<<<<< HEAD
   vars:
     - user: aniket
   tasks:
@@ -21,13 +20,3 @@
       when: file_exists is succeeded
 
 
-
-=======
-  become: yes
-  tasks:
-    - name: Touch a file, using symbolic modes to set the permissions (equivalent to 0644)
-      ansible.builtin.file: 
-        path: /work/aniket.conf
-        state: touch
-        mode: u=rw,g=r,o=r
->>>>>>> c27679b (commit)
