@@ -1,6 +1,5 @@
 ---
-<<<<<<< HEAD
-- hosts: dev
+  hosts: dev
   become: yes
   vars:
     page_title: My Second Landing Page
@@ -45,12 +44,3 @@
 
 
 
-=======
-- hosts: dev 
-  become: yes
-  tasks:
-    - name: Remove file 
-      ansible.builtin.file:
-        path: /work/aniket.config
-        state: absent
->>>>>>> c27679b (commit)
